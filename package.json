@@ -1,0 +1,27 @@
+{
+  "name": "vitest-tdd-string-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "test-ui": "vitest --ui",
+    "coverage": "vitest run --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aunimhsn/vitest-tdd-string-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aunimhsn/vitest-tdd-string-calculator/issues"
+  },
+  "homepage": "https://github.com/aunimhsn/vitest-tdd-string-calculator#readme",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/ui": "^1.6.0",
+    "vitest": "^1.6.0"
+  }
+}
