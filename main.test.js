@@ -30,11 +30,32 @@ describe('test of the function add()', () => {
         expect(add('1\n2,3')).toBe(6)
     })
 
-    it('returns 3 for ""//;\n1;2"', () => {
+    it('returns 3 for "//;\n1;2"', () => {
         expect(add('//;\n1;2')).toBe(3)
     })
 
-    it('returns 3 for ""//;\n1;2"', () => {
+    it('returns 3 for "//;\n1;-2"', () => {
         expect(() => add('//;\n1;-2')).toThrowError('Negatives not allowed. [-2]')
     })
+
+    it('returns 3 for "//;\n1;-2;-3"', () => {
+        expect(() => add('//;\n1;-2;-3')).toThrowError('Negatives not allowed. [-2,-3]')
+    })
+
+    it('returns 3 for "//;\n1;2;1002"', () => {
+        expect(add('//;\n1;2;1002')).toBe(3)
+    })
+    
+    it('returns 3 for "//;\n1;2;1002,5000"', () => {
+        expect(add('//;\n1;2;1002,5000')).toBe(3)
+    })
+
+    it('returns 6 for "//[***]\n1***2***3"', () => {
+        expect(add('//[***]\n1***2***3')).toBe(6)
+    })
+
+    it('returns 6 for "//[**][%%]\n1**2%%33"', () => {
+        expect(add('//[**][%%]\n1**2%%3')).toBe(6)
+    })
+
 })
