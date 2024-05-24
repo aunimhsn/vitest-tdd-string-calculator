@@ -54,7 +54,7 @@ describe('test of the function add()', () => {
         expect(add('//[***]\n1***2***3')).toBe(6)
     })
 
-    it('returns 6 for "//[**][%%]\n1**2%%33"', () => {
+    it('returns 6 for "//[**][%%]\n1**2%%3"', () => {
         expect(add('//[**][%%]\n1**2%%3')).toBe(6)
     })
 
